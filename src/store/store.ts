@@ -12,6 +12,11 @@ export class TodoStore {
         this.todo = newTodo;
     }
 
+    @action
+    count = () =>  {
+        return this.todos.length;
+    };
+
     @action 
     getTodo = () => {
         return this.todos;

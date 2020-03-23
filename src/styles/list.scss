@@ -1,0 +1,56 @@
+.btn-add {
+  background-color: rgba(49, 48, 48, 0.8);
+  border: 0 solid;
+  border-radius: 2px;
+  padding: 3px 6px;
+  margin: 30px;
+
+  font-size: 16px;
+  font-family: fantasy;
+  color: white;
+
+  &:hover {
+    background-color: #000000;
+    color: white;
+  }
+}
+
+.content {
+  text-align: center;
+  color: rgb(128, 1, 1);
+}
+
+.todos {
+  background-color: #ccc;
+  width: 599px;
+  border-radius: 4px;
+  margin: auto;
+}
+.todos::before {
+  margin-top: 5px;
+}
+
+li {
+  list-style: none;
+  background-color: white;
+}
+.title {
+  text-align: center;
+
+  &:hover {
+    color: rgb(105, 105, 105);
+  }
+}
+
+.count {
+  color: rgb(133, 0, 0);
+}
+
+.items {
+  padding: 5px;
+  border: 1px solid black;
+}
+br {
+  display: flex;
+  margin: 1px 0;
+}

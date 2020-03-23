@@ -1,25 +1,18 @@
 import React from 'react';
-import './App.css';
+import Todo from './components/todos';
+import {TodoStore} from './store/store';
+import { observer } from 'mobx-react';
 
-function App() {
+interface Iprops{
+  store?: TodoStore; 
+}
+
+const  App : React.FC<{props: TodoStore}> = observer(({props}) => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Todo store= {props}/>
     </div>
   );
-}
+})
 
 export default App;

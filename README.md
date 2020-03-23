@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/duxianwei520/react.svg)](https://github.com/muhammeddeniz/react-next-ts-starterkit/blob/master/README.md)
 
 
-# React Typescript Kit
+# React Todo App
 
 
 ### **İçerdiği Paketler**

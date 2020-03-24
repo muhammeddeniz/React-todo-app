@@ -11,7 +11,7 @@ interface Iprops{
 const  App : React.FC<{props: TodoStore}> = observer(({props}) => {
   return (
     <div className="App">
-      <h1 className="title">Todo App</h1>
+      <a href=""><h1 className="title">Todo App</h1></a>
       
       <Todo store= {props}/>
     </div>

@@ -22,7 +22,13 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
         <div className="items">
 
       {props.store.todos.map(index => {
-        return <><li className="todos">{index}</li><br/></>;
+        return <div className="item"><li className="todos">
+          {index}
+        </li>
+        <button className="btn-delete"
+        onClick={e => props.store.deleteItems(index)}>
+          Delete</button>
+        </div>;
       })}
         </div>
     </div>

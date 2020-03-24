@@ -1,29 +1,53 @@
-.btn-add {
-  background-color: rgba(49, 48, 48, 0.8);
-  border: 0 solid;
-  border-radius: 2px;
-  padding: 3px 6px;
-  margin: 30px;
+@import './variable.scss';
 
-  font-size: 16px;
+.btn-add {
+  background-color: $btn-background;
+  border: $btn-border;
+  border-radius: $btn-radius;
+  padding: $btn-padding;
+  margin: $btn-margin;
+
+  font-size: $btn-font-size;
   font-family: fantasy;
-  color: white;
+  color: $btn-color;
 
   &:hover {
-    background-color: #000000;
-    color: white;
+    background-color: $btn-hover-background;
+    color: $btn-color;
   }
 }
 
+.btn-delete {
+  background-color: $btn-background;
+  border: $btn-border;
+  border-radius: $btn-radius;
+  
+  margin-left: 200px;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+
+  font-size: $btn-font-size;
+  font-family: fantasy;
+  color: $btn-color;
+
+  &:hover {
+    background-color: $btn-hover-background;
+    color: $btn-color;
+  }
+}
+
+
 .content {
   text-align: center;
-  color: rgb(128, 1, 1);
+  color: $content-color;
 }
 
 .todos {
-  background-color: #ccc;
-  width: 599px;
-  border-radius: 4px;
+  background-color:  $todos-background;
+  width: $todos-width;
+  border-radius: $todos-radius;
   margin: auto;
 }
 .todos::before {
@@ -32,25 +56,31 @@
 
 li {
   list-style: none;
-  background-color: white;
+  background-color: $btn-color;
 }
 .title {
   text-align: center;
 
   &:hover {
-    color: rgb(105, 105, 105);
+    color: $title-hover;
   }
 }
 
 .count {
-  color: rgb(133, 0, 0);
+  color: $count-color;
 }
 
-.items {
-  padding: 5px;
-  border: 1px solid black;
+.item {
+  padding: $items-padding;
+  border: $items-border ;
+  border-radius: $items-radius ;
+  margin: $items-margin;
+  display: flex;
+
 }
+
+
 br {
   display: flex;
-  margin: 1px 0;
+  margin: $br-margin;
 }

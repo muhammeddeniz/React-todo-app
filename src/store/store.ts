@@ -13,17 +13,23 @@ export class TodoStore {
     }
 
     @action
-    count = () =>  {
+    count = () : any =>  {
         return this.todos.length;
     };
 
     @action 
-    getTodo = () => {
+    getTodo = () : any => {
         return this.todos;
     }
 
     @action 
-    addTodo = () => {
+    addTodo = () : void => {
         this.todos.push(this.todo);
+    }
+
+    @action 
+    deleteItems = (item : string) : void => {
+        const de = this.todos.indexOf(item);
+        this.todos.splice(de, 1);
     }
 }

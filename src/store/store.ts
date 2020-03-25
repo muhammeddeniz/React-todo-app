@@ -2,7 +2,10 @@ import { observable, action } from 'mobx';
 
 export class TodoStore {
     @observable 
-    todos : [string] = ["muhammed"]
+    todos : [string] = ["muhammed"];
+
+     @observable
+     yapilanlar : [string] = ["ilk yapilan"] ;
 
     @observable
     todo : string = "";
@@ -31,5 +34,20 @@ export class TodoStore {
     deleteItems = (item : string) : void => {
         const de = this.todos.indexOf(item);
         this.todos.splice(de, 1);
+        this.yapilanlar.push(item);
+    }
+
+
+    @action 
+    deleteItems2 = (item : string) : void => {
+        const de = this.todos.indexOf(item);
+        this.yapilanlar.splice(de, 1);
+    }
+
+    @action 
+    geriGonder = (item: string) : void => {
+        const de = this.todos.indexOf(item);
+        this.yapilanlar.splice(de, 1);
+        this.todos.push(item);
     }
 }

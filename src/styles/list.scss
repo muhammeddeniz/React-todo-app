@@ -1,9 +1,9 @@
-@import './variable.scss';
-@import './mixins.scss';
+@import "./variable.scss";
+@import "./mixins.scss";
 
 body {
   @include setDefault;
-} 
+}
 
 .btn-add {
   @include btn-style;
@@ -16,11 +16,11 @@ body {
   margin-left: $btn-delete-mr-l;
   height: $btn-delete-h;
   width: $btn-delete-w;
+  padding: 0px 10px;
   text-align: center;
   margin: auto;
- 
+  display: inline-block;
 }
-
 
 .content {
   text-align: center;
@@ -28,12 +28,22 @@ body {
 }
 
 .todos {
-  background-color:  $todos-background;
-  width: $todos-width;
+  background-color: $todos-background;
+  width: $stodos-width;
   border-radius: $todos-radius;
   margin: auto;
   padding: $todos-padding;
 }
+
+.todosYapildi {
+  background-color: $todos-background;
+  width: $todos-width;
+  border-radius: $todos-radius;
+  margin: auto;
+  padding: $todos-padding;
+  text-decoration: line-through;
+}
+
 .todos::before {
   margin-top: 5px;
 }
@@ -56,15 +66,29 @@ li {
 
 .item {
   padding: $items-padding;
-  border: $items-border ;
-  border-radius: $items-radius ;
+  border: $items-border;
+  border-radius: $items-radius;
   margin: $items-margin;
   display: flex;
-
 }
-
 
 br {
   display: flex;
   margin: $br-margin;
 }
+
+.store {
+  display: flex;
+  margin: auto;
+
+  .items {
+    width: 900px;
+  }
+}
+
+
+.title3 {
+  color: royalblue;
+  padding-top: 30px;
+}
+

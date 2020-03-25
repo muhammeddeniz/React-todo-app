@@ -22,5 +22,8 @@ $ yarn
 $ yarn start
 ```
 
+### **Görünüm**
+![alt text](https://github.com/muhammeddeniz/React-todo-app/blob/master/view/Screenshot%20.png)
+
 **http://localhost:3000 adresinden projeyi geliştirmeye başlayabilirsiniz.**
 

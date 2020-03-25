@@ -1,41 +1,24 @@
 @import './variable.scss';
+@import './mixins.scss';
+
+body {
+  @include setDefault;
+} 
 
 .btn-add {
-  background-color: $btn-background;
-  border: $btn-border;
-  border-radius: $btn-radius;
-  padding: $btn-padding;
-  margin: $btn-margin;
-
-  font-size: $btn-font-size;
-  font-family: fantasy;
-  color: $btn-color;
-
-  &:hover {
-    background-color: $btn-hover-background;
-    color: $btn-color;
-  }
+  @include btn-style;
+  @include btn-delete($btn-padding, $btn-margin);
 }
 
 .btn-delete {
-  background-color: $btn-background;
-  border: $btn-border;
-  border-radius: $btn-radius;
-  
-  margin-left: 200px;
-  height: 25px;
-  width: 100px;
+  @include btn-style;
+
+  margin-left: $btn-delete-mr-l;
+  height: $btn-delete-h;
+  width: $btn-delete-w;
   text-align: center;
   margin: auto;
-
-  font-size: $btn-font-size;
-  font-family: fantasy;
-  color: $btn-color;
-
-  &:hover {
-    background-color: $btn-hover-background;
-    color: $btn-color;
-  }
+ 
 }
 
 
@@ -49,6 +32,7 @@
   width: $todos-width;
   border-radius: $todos-radius;
   margin: auto;
+  padding: $todos-padding;
 }
 .todos::before {
   margin-top: 5px;

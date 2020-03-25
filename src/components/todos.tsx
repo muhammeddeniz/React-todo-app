@@ -14,6 +14,10 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
         type="text"
         value={props.store.todo}
         onChange={e => props.store.setTodo(e.target.value)}
+        onKeyPress={(e: any) => {
+          if (e.key === 'Enter') {
+          props.store.addTodo();    
+          }}}
       />
       <button className="btn-add" onClick={props.store.addTodo}>
         Add

@@ -1,0 +1,26 @@
+@mixin btn-style {
+  background-color: $btn-background;
+  border: $btn-border;
+  border-radius: $btn-radius;
+
+  font-size: $btn-font-size;
+  font-family: fantasy;
+  color: $btn-color;
+
+  &:hover {
+    background-color: $btn-hover-background;
+    color: $btn-color;
+  }
+}
+
+@mixin setDefault {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@mixin btn-delete($btn-padding, $btn-margin) {
+    padding: $btn-padding;
+    margin: $btn-margin;
+}

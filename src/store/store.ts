@@ -1,53 +1,59 @@
-import { observable, action } from 'mobx';
+import { observable, action } from "mobx";
 
 export class TodoStore {
-    @observable 
-    todos : [string] = ["muhammed"];
+  @observable
+  todos: [string | never] = ["muhammed"];
 
-     @observable
-     yapilanlar : [string] = ["ilk yapilan"] ;
+  @observable
+  yapilanlar: [string | never] = ["ilk yapilan"];
 
-    @observable
-    todo : string = "";
+  @observable
+  todo: string = "";
 
-    @action
-    setTodo = (newTodo : string) => {
-        this.todo = newTodo;
-    }
+  @action
+  setTodo = (newTodo: string) => {
+    this.todo = newTodo;
+  };
 
-    @action
-    count = () : any =>  {
-        return this.todos.length;
-    };
+  @action
+  count = () => {
+    return this.todos.length;
+  };
 
-    @action 
-    getTodo = () : any => {
-        return this.todos;
-    }
+  @action
+  getTodo = () => {
+    return this.todos;
+  };
 
-    @action 
-    addTodo = () : void => {
-        this.todos.push(this.todo);
-    }
+  @action
+  addTodo = () => {
+    this.todos.push(this.todo);
+  };
 
-    @action 
-    deleteItems = (item : string) : void => {
-        const de = this.todos.indexOf(item);
-        this.todos.splice(de, 1);
-        this.yapilanlar.push(item);
-    }
+  @action
+  deleteItems = (item: string) => {
+    const de = this.todos.indexOf(item);
+    this.yapilanlar.push(item);
+    this.todos.splice(de, 1);
+  };
 
+  @action
+  deleteItems2 = (item: string) => {
+    const de = this.todos.indexOf(item);
+    this.yapilanlar.splice(de, 1);
+  };
 
-    @action 
-    deleteItems2 = (item : string) : void => {
-        const de = this.todos.indexOf(item);
-        this.yapilanlar.splice(de, 1);
-    }
+  @action
+  geriGonder = (item: string) => {
+    const de = this.todos.indexOf(item);
+    this.todos.push(item);
+    this.yapilanlar.splice(de, 1);
+    
+  };
 
-    @action 
-    geriGonder = (item: string) : void => {
-        const de = this.todos.indexOf(item);
-        this.yapilanlar.splice(de, 1);
-        this.todos.push(item);
-    }
+  @action
+  clear = () => {
+    this.todos.splice(0, this.todos.length);
+    this.yapilanlar.splice(0, this.yapilanlar.length);
+  };
 }

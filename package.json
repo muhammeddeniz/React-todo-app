@@ -11,6 +11,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "babel-plugin-jsx-dom-expressions": "^0.17.0",
+    "es6-promise": "^4.2.8",
     "mobx": "^5.15.4",
     "mobx-jsx": "^0.10.0",
     "mobx-react": "^6.1.8",

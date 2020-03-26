@@ -8,13 +8,13 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
     console.log(props.store.yapilanlar);
 
     if (props.store.yapilanlar.length === 1 - 1) {
-      setYapildi("Yapıldı Listesi Boş");
+      setYapildi("Done List is Empty");
     } else {
       setYapildi("");
     }
 
     if (props.store.todos.length === 1 - 1) {
-      setYapilacak("Yapılacak Listesi Boş");
+      setYapilacak("Todo List is Empty");
     } else {
       setYapilacak("");
     }
@@ -39,10 +39,13 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
       <button className="btn-add" onClick={props.store.addTodo}>
         Add
       </button>
+      <button className="btn-add" onClick={props.store.clear}>
+        Clear All
+      </button>
       <div className="store">
         <div className="items">
-          <h1>Yapilacaklar</h1>
-          {props.store.todos.map((index, key )=> {
+          <h1>TODO</h1>
+          {props.store.todos.map((index, key) => {
             return (
               <div className="item" key={key}>
                 <li className="todos">{index}</li>
@@ -52,7 +55,7 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
                     props.store.deleteItems(index);
                   }}
                 >
-                  Yapildi
+                  Done
                 </button>
               </div>
             );
@@ -60,7 +63,7 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
           <h1 className="title3">{yapilacak}</h1>
         </div>
         <div className="items">
-          <h1>Yapıldı</h1>
+          <h1>DONE</h1>
 
           {props.store.yapilanlar.map((index, key) => {
             return (

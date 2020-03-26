@@ -21,9 +21,18 @@ $ yarn
 ```sh
 $ yarn start
 ```
+**http://localhost:3000 adresinden projeyi geliştirmeye başlayabilirsiniz.**
+
+
 
 ### **Görünüm**
-![alt text](https://github.com/muhammeddeniz/React-todo-app/blob/master/view/Screenshot%20.png)
+##### *Normal Ekran*
+![alt text](https://github.com/muhammeddeniz/React-todo-app/blob/master/view/v2.2.png)
 
-**http://localhost:3000 adresinden projeyi geliştirmeye başlayabilirsiniz.**
+##### *Todo Kısmı Boş*
+![alt text](https://github.com/muhammeddeniz/React-todo-app/blob/master/view/v2.3.png)
+
+##### *Done Kısmı Boş*
+![alt text](https://github.com/muhammeddeniz/React-todo-app/blob/master/view/v2.4.png)
+
 

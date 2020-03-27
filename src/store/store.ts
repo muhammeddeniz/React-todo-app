@@ -44,11 +44,10 @@ export class TodoStore {
   };
 
   @action
-  geriGonder = (item: string) => {
-    const de = this.todos.indexOf(item);
-    this.todos.push(item);
-    this.yapilanlar.splice(de, 1);
-    
+  geriGonder =  (item: string) => {
+  
+     this.yapilanlar.splice(this.yapilanlar.indexOf(item), 1);
+     this.todos.push(item);
   };
 
   @action

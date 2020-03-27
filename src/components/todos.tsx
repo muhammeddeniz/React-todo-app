@@ -89,7 +89,7 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
                 <button
                   className="btn-delete"
                   onClick={e => {
-                    props.store.deleteItems2(index);
+                    props.store.geriGonder(index);
                   }}
                 >
                   Delete

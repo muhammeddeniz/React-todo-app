@@ -4,20 +4,17 @@ import { TodoStore } from "./store/store";
 import { observer } from "mobx-react";
 import "./styles/list.scss";
 
-interface Iprops {
-  store?: TodoStore;
-}
 
-const App: React.FC<{ props: TodoStore }> = observer(
-  ({ props }): JSX.Element => {
+const App: React.FC<{ Data: TodoStore }> = observer(
+  (props): JSX.Element => {
     return (
       <div>
         <div className="App">
-          <a href="">
+          <a href="#">
             <h1 className="title">Todo App</h1>
           </a>
 
-          <Todo store={props} />
+          <Todo Data={props.Data} />
         </div>
       </div>
     );

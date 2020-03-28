@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import {TodoStore} from './store/store';
 
-const store = new TodoStore();
+const store2 = new TodoStore();
+
+interface Iprops {
+  store: TodoStore;
+  props: string;
+}
 
 ReactDOM.render(
   <React.StrictMode >
-    <App props={store}/>
+    <App Data={store2}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -18,16 +18,10 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
     } else {
       setYapilacak("");
     }
-  });
+  }, [props.store.yapilanlar, props.store.todos.length]);
 
   const [yapildi, setYapildi] = useState("");
   const [yapilacak, setYapilacak] = useState("");
-
-  const f = () => {
-    let text : any = document.getElementById("d");
-
-    text.value = " ";
-  }
 
   return (
     <div className="content">
@@ -40,11 +34,17 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
         onKeyPress={(e: any) => {
           if (e.key === "Enter") {
             props.store.addTodo();
-            f();
+            props.store.todo = " ";
           }
         }}
       />
-      <button className="btn-add" onClick={props.store.addTodo}>
+      <button
+        className="btn-add"
+        onClick={e => {
+          props.store.addTodo();
+          props.store.todo = " ";
+        }}
+      >
         Add
       </button>
       <button className="btn-add" onClick={props.store.clear}>
@@ -89,7 +89,7 @@ const TodoList: React.FC<{ store: TodoStore }> = observer(props => {
                 <button
                   className="btn-delete"
                   onClick={e => {
-                    props.store.geriGonder(index);
+                    props.store.deleteItems2(index);
                   }}
                 >
                   Delete

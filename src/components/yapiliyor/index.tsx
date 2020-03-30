@@ -24,20 +24,27 @@ const TodoList: React.FC<{Iprops: TodoStore}> = observer(props => {
   return (
     
         <div className="items">
-          <h1>TODO</h1>
-          {props.Iprops.todos.map((index: string, key: number) => {
+          <h1>DOING</h1>
+          {props.Iprops.yapiliyor.map((index: string, key: number) => {
             return (
               <div className="item" key={key}>
                 <li className="todos">{index}</li>
                 <button
                   className="btn-delete"
                   onClick={e => {
-                    props.Iprops.yapilacakEkle(index);
+                    props.Iprops.yapiliyorEkle(index);
                   }}
                 >
-                  Yapilicak  
-                </button> 
-              
+                  Yapilmadi
+                </button>
+                <button
+                  className="btn-delete"
+                  onClick={e => {
+                    props.Iprops.yapildiEkle(index);
+                  }}
+                >
+                  Yapildi
+                </button>
               </div>
             );
           })}

@@ -27,15 +27,7 @@ const Done: React.FC<{ Data: TodoStore }> = observer(props => {
       return (
         <div className="item" key={key}>
           <li className="todosYapildi">{index}</li>
-          <button
-            className="btn-delete"
-            onClick={e => {
-              props.Data.geriGonder(index);
-            }}
-          >
-            Add todo
-          </button>
-
+   
           <button
             className="btn-delete"
             onClick={e => {

@@ -8,6 +8,9 @@ export class TodoStore {
   yapilanlar: [string | never] = ["ilk yapilan"];
 
   @observable
+  yapiliyor: [string | never] = ["ilk yapilan"];
+
+  @observable
   todo: string = "";
 
   @action
@@ -55,4 +58,25 @@ export class TodoStore {
     this.todos.splice(0, this.todos.length);
     this.yapilanlar.splice(0, this.yapilanlar.length);
   };
+
+
+  @action
+  yapiliyorEkle = (item: string) => { 
+    this.yapiliyor.splice(this.yapiliyor.indexOf(item), 1);
+    this.todos.push(item);
+  };
+
+  @action
+  yapilacakEkle = (item: string) => { 
+    this.todos.splice(this.todos.indexOf(item), 1);
+    this.yapiliyor.push(item);
+  };
+
+
+  @action
+  yapildiEkle = (item: string) => { 
+    this.yapiliyor.splice(this.yapiliyor.indexOf(item), 1);
+    this.yapilanlar.push(item);
+  };
+
 }

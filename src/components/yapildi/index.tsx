@@ -16,7 +16,7 @@ const Done: React.FC<{ Data: TodoStore }> = observer(props => {
     } else {
       setYapildi("");
     }
-  }, [props.Data.yapilanlar, props.Data.todos.length]);
+  });
 
   const [yapildi, setYapildi] = useState("");
 

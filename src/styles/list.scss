@@ -15,10 +15,11 @@ body {
 
   margin-left: $btn-delete-mr-l;
   height: $btn-delete-h;
-  width: $btn-delete-w;
+  width: 99px;
   padding: 0px 10px;
   text-align: center;
   margin: auto;
+  margin-right: 5px;
   display: inline-block;
 }
 
@@ -33,6 +34,7 @@ body {
   border-radius: $todos-radius;
   margin: auto;
   padding: $todos-padding;
+  margin-right: 20px;
 }
 
 .todosYapildi {
@@ -68,7 +70,7 @@ li {
   padding: $items-padding;
   border: $items-border;
   border-radius: $items-radius;
-  margin: $items-margin;
+  width: 450px;
   display: flex;
 }
 

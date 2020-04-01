@@ -34,7 +34,7 @@ const Done: React.FC<{ Data: TodoStore }> = observer(props => {
               props.Data.deleteItems2(index);
             }}
           >
-            Delete
+            Sil
           </button>
         </div>
       );

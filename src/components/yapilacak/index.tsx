@@ -35,7 +35,7 @@ const TodoList: React.FC<{Iprops: TodoStore}> = observer(props => {
                     props.Iprops.yapilacakEkle(index);
                   }}
                 >
-                  Yapilicak  
+                  Yapılıyor  
                 </button> 
               
               </div>

@@ -30,11 +30,11 @@ const InputArea: React.FC<{ Data: TodoStore }> = observer(props => {
           props.Data.todo = " ";
         }}
       >
-        Add
+      Ekle        
       </button>
       <button className="btn-add" 
       onClick={props.Data.clear}>
-        Clear All
+        Hepsini Temizle
       </button>
     </div>
   );

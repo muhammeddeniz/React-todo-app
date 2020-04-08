@@ -12,19 +12,19 @@ const TodoList: React.FC<{Iprops: TodoStore}> = observer(props => {
     console.log("props.store.todo");
     console.log(props.Iprops.yapilanlar);
 
-    if (props.Iprops.todos.length === 1 - 1) {
-      setYapilacak("Todo List is Empty");
+    if (props.Iprops.yapiliyor.length === 1 - 1) {
+      setYapilacak("Yapiliyor Listesi Boş!");
     } else {
       setYapilacak("");
     }
-  }, [props.Iprops.yapilanlar, props.Iprops.todos.length]);
+  }, [props.Iprops.yapilanlar, props.Iprops.yapiliyor.length]);
 
   const [yapilacak, setYapilacak] = useState("");
 
   return (
     
         <div className="items">
-          <h1>DOING</h1>
+          <h1>YAPILIYOR</h1>
           {props.Iprops.yapiliyor.map((index: string, key: number) => {
             return (
               <div className="item" key={key}>

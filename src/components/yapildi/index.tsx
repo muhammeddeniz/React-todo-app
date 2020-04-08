@@ -12,7 +12,7 @@ const Done: React.FC<{ Data: TodoStore }> = observer(props => {
     console.log(props.Data.yapilanlar);
 
     if (props.Data.yapilanlar.length === 1 - 1) {
-      setYapildi("Done List is Empty");
+      setYapildi("Yapıldı Listesi Boş!");
     } else {
       setYapildi("");
     }
@@ -22,7 +22,7 @@ const Done: React.FC<{ Data: TodoStore }> = observer(props => {
 
   return (
     <div className="items">
-    <h1>DONE</h1>
+    <h1>BİTTİ</h1>
     {props.Data.yapilanlar.map((index, key) => {
       return (
         <div className="item" key={key}>

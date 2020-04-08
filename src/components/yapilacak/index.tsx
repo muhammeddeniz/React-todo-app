@@ -13,7 +13,7 @@ const TodoList: React.FC<{Iprops: TodoStore}> = observer(props => {
     console.log(props.Iprops.yapilanlar);
 
     if (props.Iprops.todos.length === 1 - 1) {
-      setYapilacak("Todo List is Empty");
+      setYapilacak("Yapılacak Listesi Boş!");
     } else {
       setYapilacak("");
     }
@@ -24,7 +24,7 @@ const TodoList: React.FC<{Iprops: TodoStore}> = observer(props => {
   return (
     
         <div className="items">
-          <h1>TODO</h1>
+          <h1>YAPILACAK</h1>
           {props.Iprops.todos.map((index: string, key: number) => {
             return (
               <div className="item" key={key}>
